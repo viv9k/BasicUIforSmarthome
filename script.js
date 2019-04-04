@@ -29,7 +29,7 @@
     var check = document.getElementById("fad").src;
     var menu = "searchOptionsMenu";
 
-    if(check == "file:///C:/Users/764868/Desktop/work/web-all-icons/filter-arrow-up.svg"){
+    if(check == "file:/// (location) /web-all-icons/filter-arrow-up.svg"){
 
       document.getElementById(menu).style.height = "0px";
       document.getElementById(menu).style.paddingTop = "0px";
