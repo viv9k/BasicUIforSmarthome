@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Home</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <script type="text/javascript" src="script.js"></script>
+    
+</head>
+
+<body>
+        <div class="mainBody">
+        <div class="LeftBody">
+        <div class="icon-bar">
+                <div style="float:left">
+                        <a class="menu" href="#">
+                                <img src="web-all-icons/menu.svg" alt="">
+                        </a>
+                        <div id="main">
+                                <a id="dashboard" class="inactive" onclick="openNav('dashboard')">
+                                        <img id="dashboardImage" src="web-all-icons/dashboard-inactive.svg" alt="">
+                                </a>
+                                <a id="settings" class="inactive" onclick="openNav('settings')">
+                                        <img id="settingsImage" src="web-all-icons/settings-inactive.svg" alt="">
+                                </a> 
+                                <a id="help" class="inactive" onclick="openNav('help')">
+                                        <img id="helpImage" src="web-all-icons/help-inactive.svg" alt="">
+                                </a>
+                        </div>
+                </div>
+                     
+                <div style="float:right">
+                        <a class="logo" href="#">
+                                <img src="web-all-icons/logo.svg" alt="">
+                        </a>
+                        <div id="dashboardMenu" class="sidebar">
+                                <a class="submain"><b>Dashboard</b></a>
+                                <a id="customers" class="submenu" href="#">Customers</a>
+                                <a class="submenu" href="#">Underwriting</a>
+                                <a class="submenu" href="#">Claim</a>
+                        </div>
+
+                        <div id="settingsMenu" class="sidebar">
+                        </div>
+
+                        <div id="helpMenu" class="sidebar">
+                        </div>
+
+                 </div>
+
+                </div>
+        </div>
+
+                                
+
+                <div class="stats">
+                        <div class="row" style="background-color: #FFFFFF; padding-top: 10px;">
+                                        <div class="col-md-6">
+                                                        <div><a class="header" href="#">Customers</a></div>
+
+                                                        <div class="bread">
+                                                                <a><img id="breadcrumb" src="web-all-icons/breadcrumb.svg" alt=""></a>
+                                                                <a style="position: relative; bottom: 2px; font-family: Roboto-Light; font-size: 10px; color: #B3B3B3;">Dashboard/</a>
+                                                                <a style="position: relative; bottom: 2px; right: 1px; font-family: Roboto-Light; font-size: 10px; color: #333333;">Customers</a>
+                                                        </div>    
+                                        </div>
+                                        <div class="col-md-6">
+                                                <div style="float:right; padding-right: 80px; position: relative; top: 10px;">
+                                                        <div class="m1">
+                                                                <a>
+                                                                        <img id="notification" src="web-all-icons/notification.svg" alt="">
+                                                                        <span id="nspan">2</span>
+                                                                </a>
+                                
+                                                        </div>
+                                                                
+                                                        <div class="m2">
+                                                                <a>
+                                                                        <img id="avatar" src="web-all-icons/avatar.svg" alt="">                                
+                                                                        <div class="d-inline-flex p-2 bd-highlight">
+                                                                                <div class="UserName"><b>JHON SMITH</b></div>
+                                                                                <div class="description">Insurer</div>
+                                                                        </div>
+                                                                </a>
+                                                                        <a class="m21">
+                                                                                <img id="UserDropDown" src="web-all-icons/user-dropdown.svg" alt="">
+                                                                        </a>                
+                                                        </div>
+                                                </div>
+                                                        
+                                        </div>
+                                </div>
+                        <div>
+                                <div class="row" style="padding-left:20px;">
+                                <div class="col-md-3">
+                                        <div>
+                                                <div class="mhead1"><a class="dataMhead1">23</a>
+                                                        <div class="ms1">MN</div>
+                                                </div>
+                                        <div class="mdes1">Total StateFarm Home policies</div>
+                                        </div>   
+                                </div>
+                                <div class="col-md-3">
+                                        <div>
+                                                <div class="mhead2"><a class="dataMhead1">7</a>
+                                                <div class="ms1">MN</div>
+                                                </div>
+                                                <div class="mdes2">Smart Sensor Users</div>
+                                        </div>    
+                                </div>
+                                <div class="col-md-3">
+                                        <div>
+                                                <div class="mhead3"><a class="dataMhead1">25</a>
+                                                <div class="ms1">K</div>
+                                                </div>
+                                                <div class="mdes3">Claims (2017)</div>
+                                        </div>
+                                </div>
+                                <div class="col-md-3">
+                                        <div>
+                                                <div class="mhead4"><a class="dataMhead1">840</a>
+                                                <div class="ms1">K</div>
+                                                </div>
+                                                <div class="mdes4">New Smart Sensor Users (2017)</div>
+                                        </div>        
+                                </div>
+                                </div>
+                        </div>
+                        
+                        
+
+                        <div class="row" id="row1">
+                                <div class="col-md-6">
+                                        <div class="filterSearch">
+                                                <a><b>FILTER SEARCH</b></a>
+                                        </div>
+                                                
+                                </div>
+                                <div class="col-md-6">
+                                        <div class="clear">
+                                                <a class="activeSearch">
+                                                        <a><b>Clear</b></a>
+                                                        <a class="searchOptionsbut" id="search" onclick="openSearch()">
+                                                        <img id="fad" src="web-all-icons/filter-arrow-down.svg" alt="">
+                                                </a>
+                                                </a>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <div class="searchOptions" id="searchOptionsMenu">
+                                        <div class="row" id="rowC2">
+                                                <div class="col" id="state">
+                                                        <a class="textSearch">State</a>
+                                                        <div class="optionSearch"><b>ALL</b></div>
+                                                 </div>
+                                                <div class="col" id="country">
+                                                        <a class="textSearch">Country</a>
+                                                        <div class="optionSearch"><b>ALL</b></div>
+                                                </div>
+                                                <div class="col" id="city">
+                                                        <div class="optionSearchCity">City</div>
+                                                </div>
+                                                <div class="col" id="zipcode">
+                                                        <div class="optionSearchCity">Zipcode</div>
+                                                </div>
+                                                <div class="col" id="fmv">
+                                                        <a class="textSearch">Sq. Feet Min Value</a>
+                                                        <div class="optionSearch"><b>1000</b></div>
+                                                </div>
+                                                <div class="col" id="fmv">
+                                                        <div class="optionSearchMax">Sq. Feet Max Value</div>
+                                                </div>
+                                                <div class="col">
+                                                        <div class="searchButton">
+                                                                <img id="search" src="web-all-icons/Search.svg" alt="">
+                                                        </div>
+                                                </div>
+                                        </div>
+                        </div>
+
+                        <div class="row3">
+                                        <div class="row3Menu" id="row3MenuEdit">
+                                                <div class="r3m">
+                                                        <a class="r3mMain" id="sdats" href="#">Smart Device Adoption Trends</a>
+                                                </div>
+                                                <div class="r3m">
+                                                        <a class="r3mMain" id="Dp" href="#">Device Preference</a>
+                                                </div>
+                                                <div class="r3m">
+                                                        <a class="r3mMain" id="Ms" href="#">Maintenance Status</a>
+                                                </div>
+                                        </div>
+
+                                        <div>
+                                                        <div class="smdt">
+                                                                        <div class="smdthead">
+                                                                                <a><b>SMART DEVICE ADOPTION TRENDS</b></a>
+                                                                        </div>
+                                        
+                                        
+                                                                        <div class="row" id="smdtMajor">
+                                                                                <div class="col-md-3">
+                                                                                        <img id="gad" src="web-all-icons/graph-average-devices.svg" alt="">
+                                                                                        <div class="gadContent">
+                                                                                                <div><img id="graphHome" src="web-all-icons/graph-home.svg" alt=""></div>
+                                                                                                <div class="avgtext">3.4</div>
+                                                                                                <div class="avgdes">Average Devices</div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                        <div class="boxy">
+                                                                                                <div style="color: #58C386">
+                                                                                                        <a class="numberPercentage">50</a>
+                                                                                                        <a class="percentage">%</a>
+                                                                                                </div>
+                                                                                                <div class="boxy_content">1 to 2 smart home devices</div>
+                                                                                        </div>
+                                                                                        <div class="boxy_content1" style="color: #666666">
+                                                                                                <img id="dsmoke" src="web-all-icons/detector-smoke.svg" alt="">
+                                                                                                <span id="dsmoke_span">1</span>
+                                                                                                <div class="boxy_content1_des">Smoke / Co detectors</div>
+                                                                                        </div>
+                                                                                        <div class="boxy_content2" style="color: #666666">
+                                                                                                <img id="dwater" src="web-all-icons/detector-water-leack.svg" alt="">
+                                                                                                <span id="dsmoke_span">1</span>
+                                                                                                <div class="boxy_content1_des">Water leak detectors</div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                        <div class="boxy">
+                                                                                                <div style="color: #F49D37">
+                                                                                                        <a class="numberPercentage">24</a>
+                                                                                                        <a class="percentage">%</a>
+                                                                                                </div>
+                                                                                                <div class="boxy_content">3 to 4 smart home devices</div>
+                                                                                        </div>
+                                                                                        <div class="boxy_content1" style="color: #666666">
+                                                                                                <img id="dsmoke" src="web-all-icons/detector-smoke.svg" alt="">
+                                                                                                <span id="dsmoke_span" style="background-color: #F49D37">1</span>
+                                                                                                <div class="boxy_content1_des">Smoke / Co detectors</div>
+                                                                                        </div>
+                                                                                        <div class="boxy_content2" style="color: #666666">
+                                                                                                <img id="dwater" src="web-all-icons/detector-water-leack.svg" alt="">
+                                                                                                <span id="dsmoke_span" style="background-color: #F49D37">3</span>
+                                                                                                <div class="boxy_content1_des">Water leak detector</div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                        <div class="boxy">
+                                                                                                <div style="color: #45B6E1">
+                                                                                                        <a class="numberPercentage">26</a>
+                                                                                                        <a class="percentage">%</a>
+                                                                                                </div>
+                                                                                                <div class="boxy_content">5 and more smart home devices</div>
+                                                                                        </div>
+                                                                                        <div class="boxy_content1" style="color: #666666">
+                                                                                                <img id="dsmoke" src="web-all-icons/detector-smoke.svg" alt="">
+                                                                                                <span id="dsmoke_span" style="background-color: #45B6E1">1</span>
+                                                                                                <div class="boxy_content1_des">Smoke / Co detectors</div>
+                                                                                        </div>
+                                                                                        <div class="boxy_content2" style="color: #666666">
+                                                                                                <img id="dwater" src="web-all-icons/detector-water-leack.svg" alt="">
+                                                                                                <span id="dsmoke_span" style="background-color: #45B6E1">4</span>
+                                                                                                <div class="boxy_content1_des">Water leak detector</div>
+                                                                                        </div>
+                                                                                        <div class="boxy_content3" style="color: #666666">
+                                                                                                <img id="dwater" src="web-all-icons/detector-security.svg" alt="">
+                                                                                                <span id="dsmoke_span" style="background-color: #45B6E1">1</span>
+                                                                                                <div class="boxy_content1_des">Security / Surveillance system</div>
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                        </div>
+
+                                        <div class="row" id="graph_data">
+                                                        <div class="col-md-6" id="cover_graph">
+                                                                <div class="graph_set1">
+                                                                        <div class="grap_head">YEAR-ON-YEAR SENSOR ADOPTION</div>
+                                                                        <div class="grap_p">
+                                                                               <img id="gsd" src="web-all-icons/graph-sensor-adoption.svg" alt=""> 
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="col-md-6" id="cover_graph">
+                                                                <div class="graph_set1">
+                                                                        <div class="grap_head">SMART DEVICE ADOPTION RATE</div>
+                                                                        <div class="grap_p">
+                                                                               <img id="gar" src="web-all-icons/graph-adoption-rate.svg" alt=""> 
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                        </div> 
+                
+                                </div>
+        </div>
+</div>
+</body>
+</html>
