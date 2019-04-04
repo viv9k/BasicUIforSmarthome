@@ -11,4 +11,16 @@ How to use:
 Script.js changes:
 
 1. Go to last Function ---> openSearch()
-2. check if condition
+2. check if condition location.
+
+old: "file:/// (location) /web-all-icons/filter-arrow-up.svg"
+
+add real project location in "(location)"
+
+eg: "file:///c:/Users/vivek/desktop/BasicUIforSmarthome/web-all-icons/filter-arrow-up.svg"
+
+3. Save and exit.
+
+You are ready to use.
+
+Cheers!
